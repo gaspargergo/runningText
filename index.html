@@ -1,0 +1,41 @@
+<!doctype HTML>
+<html>
+
+<head>
+<title>Running text</title>
+<style>
+	#box{
+		width: 20%;
+		text-align: left;
+		font-family: Century;
+		font-size: 45px;
+		margin-top: 10%;
+		word-break: break-all;
+		background-color: #fff0d6;
+		border-radius: 3px;
+	}
+</style>
+
+</head>
+
+<body>
+	<center>
+		<div id="box">Megcsillan a tavasz. A nyár játszik, hangosan és félelem nélkül. Az ősz, az ősz leül, pihen. A tél méláz. </div>
+	</center>
+
+
+<script>
+
+	setInterval(letterswitch,80);
+
+	function letterswitch(){
+		var textBox = document.getElementById("box");
+		var text = textBox.innerHTML;
+		var temp = text[0];
+
+		textBox.innerHTML = text.slice(1) + temp;
+	}
+</script>
+</body>
+
+</html>
